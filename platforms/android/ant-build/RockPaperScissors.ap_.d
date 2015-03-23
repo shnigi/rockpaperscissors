@@ -110,7 +110,17 @@
 /home/shnigi/phonegap/kps/platforms/android/assets/www/res/screen/android/screen-mdpi-portrait.png \
 /home/shnigi/phonegap/kps/platforms/android/assets/www/res/screen/windows-phone/screen-portrait.jpg \
 /home/shnigi/phonegap/kps/platforms/android/assets/www/res/screen/blackberry/screen-225.png \
+/home/shnigi/phonegap/kps/platforms/android/assets/www/js/jquery-2.1.3.min.js \
+/home/shnigi/phonegap/kps/platforms/android/assets/www/js/swipe.js \
+/home/shnigi/phonegap/kps/platforms/android/assets/www/js/jquery.mobile-1.4.5.min.js \
 /home/shnigi/phonegap/kps/platforms/android/assets/www/js/index.js \
+/home/shnigi/phonegap/kps/platforms/android/assets/www/css/font-awesome.min.css \
+/home/shnigi/phonegap/kps/platforms/android/assets/www/css/shake.css \
+/home/shnigi/phonegap/kps/platforms/android/assets/www/css/jquery.mobile-1.4.5.min.css \
 /home/shnigi/phonegap/kps/platforms/android/assets/www/css/index.css \
+/home/shnigi/phonegap/kps/platforms/android/assets/www/css/style.css \
+/home/shnigi/phonegap/kps/platforms/android/assets/www/img/saksi.png \
+/home/shnigi/phonegap/kps/platforms/android/assets/www/img/papru.png \
+/home/shnigi/phonegap/kps/platforms/android/assets/www/img/kivi.png \
 /home/shnigi/phonegap/kps/platforms/android/assets/www/img/logo.png \
 /home/shnigi/phonegap/kps/platforms/android/ant-build/AndroidManifest.xml \
