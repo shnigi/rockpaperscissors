@@ -27,9 +27,9 @@
   
 <div id='mySwipe' class='swipe'>
   <div class='swipe-wrap'>
-    <div><b><img src="img/kivi.png" alt="kivi" class="shake" id="kivi"></b></div>
-    <div><b><img src="img/papru.png" alt="paperi" class="shake" id="papru"></b></div>
-    <div><b><img src="img/saksi.png" alt="sakset" class="shake" id="saksi"></b></div>
+    <div><b><img src="img/kivi.png" alt="kivi" class="shake"></b></div>
+    <div><b><img src="img/papru.png" alt="paperi" class="shake"></b></div>
+    <div><b><img src="img/saksi.png" alt="sakset" class="shake"></b></div>
   </div>
 </div>
 
@@ -73,8 +73,19 @@ window.mySwipe = Swipe(elem, {
 <script>	
 //Tarkistetaan mikä ase on valittuna
 function aseValinta() {
-    var ase = document.activeElement.tagName;
-    return ase;
+var pos = mySwipe.getPos();
+
+if (pos == "0"){
+	alert("kivi");
+}
+else if (pos == "1"){
+	alert("papru");
+}
+else {
+	alert("saksi");
+}
+
+
 }
 
 
@@ -93,7 +104,7 @@ window.onload = function() {
     //shake event callback
     function shakeEventDidOccur () {
         //put your own code here etc.
-        alert(aseValinta());
+        aseValinta();
     }
 };
 </script>
