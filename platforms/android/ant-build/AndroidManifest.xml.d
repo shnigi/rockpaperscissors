@@ -1,2 +1,2 @@
-/home/shnigi/phonegap/kps/platforms/android/ant-build/AndroidManifest.xml : \
-/home/shnigi/phonegap/kps/platforms/android/AndroidManifest.xml \
+/home/shnigi/rockpaperscissors/platforms/android/ant-build/AndroidManifest.xml : \
+/home/shnigi/rockpaperscissors/platforms/android/AndroidManifest.xml \

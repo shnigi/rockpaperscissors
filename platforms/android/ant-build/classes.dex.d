@@ -1,9 +1,9 @@
-/home/shnigi/phonegap/kps/platforms/android/ant-build/classes.dex : \
-/home/shnigi/phonegap/kps/platforms/android/ant-build/classes/com/kps/shnigi/R.class \
-/home/shnigi/phonegap/kps/platforms/android/ant-build/classes/com/kps/shnigi/RockPaperScissors.class \
-/home/shnigi/phonegap/kps/platforms/android/ant-build/classes/com/kps/shnigi/R$attr.class \
-/home/shnigi/phonegap/kps/platforms/android/ant-build/classes/com/kps/shnigi/R$drawable.class \
-/home/shnigi/phonegap/kps/platforms/android/ant-build/classes/com/kps/shnigi/R$string.class \
-/home/shnigi/phonegap/kps/platforms/android/ant-build/classes/com/kps/shnigi/R$xml.class \
-/home/shnigi/phonegap/kps/platforms/android/ant-build/classes/com/kps/shnigi/BuildConfig.class \
-/home/shnigi/phonegap/kps/platforms/android/ant-build/dexedLibs/classes-375a7ed11a91f533e132fcb810991d4b.jar \
+/home/shnigi/rockpaperscissors/platforms/android/ant-build/classes.dex : \
+/home/shnigi/rockpaperscissors/platforms/android/ant-build/classes/com/kps/shnigi/R$drawable.class \
+/home/shnigi/rockpaperscissors/platforms/android/ant-build/classes/com/kps/shnigi/R.class \
+/home/shnigi/rockpaperscissors/platforms/android/ant-build/classes/com/kps/shnigi/R$attr.class \
+/home/shnigi/rockpaperscissors/platforms/android/ant-build/classes/com/kps/shnigi/R$string.class \
+/home/shnigi/rockpaperscissors/platforms/android/ant-build/classes/com/kps/shnigi/R$xml.class \
+/home/shnigi/rockpaperscissors/platforms/android/ant-build/classes/com/kps/shnigi/CordovaApp.class \
+/home/shnigi/rockpaperscissors/platforms/android/ant-build/classes/com/kps/shnigi/BuildConfig.class \
+/home/shnigi/rockpaperscissors/platforms/android/ant-build/dexedLibs/classes-b7f2d0f0431a58053a688040358fd625.jar \
