@@ -10,7 +10,7 @@
     
     <!--JavaScript-->
 <script src="js/jquery-2.1.3.min.js"></script>
-<script src="js/jquery.mobile-1.4.5.min.js"></script>-
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
 <script src="js/swipe.js"></script>
 <script type="text/javascript" src="js/shake.js"></script>
 <!--Style--> 	
@@ -32,11 +32,12 @@
     
 <div id='mySwipe' class='swipe'>
   <div class='swipe-wrap'>
-    <div><b><img src="img/kivi.png" alt="kivi" class="shake"></b></div>
-    <div><b><img src="img/papru.png" alt="paperi" class="shake"></b></div>
-    <div><b><img src="img/saksi.png" alt="sakset" class="shake"></b></div>
+    <div><b><img src="img/kivi.png" alt="kivi" class="shake" id="kivi"></b></div>
+    <div><b><img src="img/papru.png" alt="paperi" class="shake" id="papru"></b></div>
+    <div><b><img src="img/saksi.png" alt="sakset" class="shake" id="saksi"></b></div>
   </div>
 </div>
+
 
 
 
@@ -78,8 +79,15 @@ window.mySwipe = Swipe(elem, {
  <!--Dialogiboxi loppuu-->
 
 
-           
-           <script type="text/javascript">
+<script>	
+//Tarkistetaan mikä ase on valittuna
+function aseValinta() {
+    var ase = document.activeElement.tagName;
+    return ase;
+}
+	
+	
+//ravistustoiminto	
 window.onload = function() {
     //create a new instance of shake.js.
     var myShakeEvent = new Shake({
@@ -92,7 +100,7 @@ window.onload = function() {
     //shake event callback
     function shakeEventDidOccur () {
         //put your own code here etc.
-        alert('Shake!');
+        alert(aseValinta());
     }
 };
 </script>
