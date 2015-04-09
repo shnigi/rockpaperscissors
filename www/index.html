@@ -34,6 +34,7 @@
 </div>
 
 <div style='text-align:center;padding-top:20px;'>
+<button onclick="aseValinta();">Shake!</button>
   <button onclick='mySwipe.prev()'>prev</button> 
   <button onclick='mySwipe.next()'>next</button>
 </div>
@@ -74,18 +75,41 @@ window.mySwipe = Swipe(elem, {
 //Tarkistetaan mikä ase on valittuna
 function aseValinta() {
 var pos = mySwipe.getPos();
+//randomilla tietokoneen ase
+var computerWeapon = Math.random();
+//tietokone <.033 kivi, 0.66 papru, saksi
+//pos 0 = kivi, pos 1 = papru, pos 2 = saksi
 
-if (pos == "0"){
-	alert("kivi");
+//Logiikka kivelle
+if (pos == "0" && computerWeapon < 0.33){
+	alert("Valitsit kiven, tietokone valitsi kiven");
 }
-else if (pos == "1"){
-	alert("papru");
+else if (pos == "0" && computerWeapon >= 0.33 && computerWeapon <= 0.66){
+	alert("Valitsit kiven, tietokone valitsi paperin");
 }
-else {
-	alert("saksi");
+else if (pos == "0" && computerWeapon > 0.66){
+	alert("valitsit kiven, tietokone valitsi sakset");
 }
-
-
+//Logiikka paperille
+else if (pos == "1" && computerWeapon < 0.33){
+	alert("Valitsit paperin, tietokone valitsi kiven");
+}
+else if (pos == "1" && computerWeapon >= 0.33 && computerWeapon <= 0.66){
+	alert("Valitsit paperin, tietokone valitsi paperin");
+}
+else if (pos == "1" && computerWeapon > 0.66){
+	alert("valitsit paperin, tietokone valitsi sakset");
+}
+//Logiikka saksille
+else if (pos == "2" && computerWeapon < 0.33){
+	alert("Valitsit sakset, tietokone valitsi kiven");
+}
+else if (pos == "2" && computerWeapon >= 0.33 && computerWeapon <= 0.66){
+	alert("Valitsit sakset, tietokone valitsi paperin");
+}
+else if (pos == "2" && computerWeapon > 0.66){
+	alert("valitsit sakset, tietokone valitsi sakset");
+}
 }
 
 
