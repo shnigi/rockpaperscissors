@@ -35,14 +35,15 @@
 
 <div style='text-align:center;padding-top:20px;'>
 <button onclick="aseValinta();">Shake!</button>
-  <button onclick='mySwipe.prev()'>prev</button> 
-  <button onclick='mySwipe.next()'>next</button>
+<!--  <button onclick='mySwipe.prev()'>prev</button> -->
+ <button onclick='mySwipe.next()'>next</button> 
 </div>
-
-    
+  
   </div>
 <!--Content ends-->
 
+
+<!-- Start of footer -->
 <div data-role="footer">
     <h1>Created by Niki Ahlskog 2015</h1>
   </div>
@@ -71,6 +72,117 @@ window.mySwipe = Swipe(elem, {
  <!--Dialogiboxi loppuu-->
 
 
+
+<!-- Kivi vs kivi-->
+<div data-role="page" id="pagethree">
+  <div data-role="header">
+    <h1>Rock vs Rock!</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+ <p>Rock vs Rock!</p>
+    <a href="#pageone" data-transition="slide" data-direction="reverse">Slide to Page One (reversed)</a>
+  </div> 
+</div>
+
+<!-- Kivi vs paperi -->
+<div data-role="page" id="pagefour">
+  <div data-role="header">
+    <h1>Rock vs Paper!</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+ <p>Rock vs Paper!</p>
+    <a href="#pageone" data-transition="slide" data-direction="reverse">Slide to Page One (reversed)</a>
+  </div> 
+</div>
+
+<!-- Kivi vs sakset -->
+<div data-role="page" id="pagefive">
+  <div data-role="header">
+    <h1>Rock vs Scissors!</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+ <p>Rock vs Scissors!</p>
+    <a href="#pageone" data-transition="slide" data-direction="reverse">Slide to Page One (reversed)</a>
+  </div> 
+</div>
+
+<!-- paperi vs kivi -->
+<div data-role="page" id="pagesix">
+  <div data-role="header">
+    <h1>Paper vs Rock!</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+ <p>Paper vs Rock!</p>
+    <a href="#pageone" data-transition="slide" data-direction="reverse">Slide to Page One (reversed)</a>
+  </div> 
+</div>
+
+<!-- paperi vs paperi -->
+<div data-role="page" id="pageseven">
+  <div data-role="header">
+    <h1>Paper vs Paper!</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+ <p>Paper vs Paper!</p>
+    <a href="#pageone" data-transition="slide" data-direction="reverse">Slide to Page One (reversed)</a>
+  </div> 
+</div>
+
+<!-- paperi vs sakset -->
+<div data-role="page" id="pageeight">
+  <div data-role="header">
+    <h1>Paper vs Scissors!</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+ <p>Paper vs Scissors!</p>
+    <a href="#pageone" data-transition="slide" data-direction="reverse">Slide to Page One (reversed)</a>
+  </div> 
+</div>
+
+
+<!-- sakset vs kivi -->
+<div data-role="page" id="pagenine">
+  <div data-role="header">
+    <h1>Scissors vs Rock!</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+ <p>Scissors vs Rock!</p>
+    <a href="#pageone" data-transition="slide" data-direction="reverse">Slide to Page One (reversed)</a>
+  </div> 
+</div>
+
+<!-- sakset vs paperi -->
+<div data-role="page" id="pageten">
+  <div data-role="header">
+    <h1>Scissors vs Paper!</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+ <p>Scissors vs Paper!</p>
+    <a href="#pageone" data-transition="slide" data-direction="reverse">Slide to Page One (reversed)</a>
+  </div> 
+</div>
+
+<!-- sakset vs sakset -->
+<div data-role="page" id="pageeleven">
+  <div data-role="header">
+    <h1>Scissors vs Scissors!</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+ <p>Scissors vs Scissors!</p>
+    <a href="#pageone" data-transition="slide" data-direction="reverse">Slide to Page One (reversed)</a>
+  </div> 
+</div>
+
+
 <script>	
 //Tarkistetaan mikä ase on valittuna
 function aseValinta() {
@@ -82,33 +194,42 @@ var computerWeapon = Math.random();
 
 //Logiikka kivelle
 if (pos == "0" && computerWeapon < 0.33){
-	alert("Valitsit kiven, tietokone valitsi kiven");
+	//alert("Valitsit kiven, tietokone valitsi kiven");
+	window.location.href = "#pagethree";
 }
 else if (pos == "0" && computerWeapon >= 0.33 && computerWeapon <= 0.66){
-	alert("Valitsit kiven, tietokone valitsi paperin");
+	//alert("Valitsit kiven, tietokone valitsi paperin");
+		window.location.href = "#pagefour";
 }
 else if (pos == "0" && computerWeapon > 0.66){
-	alert("valitsit kiven, tietokone valitsi sakset");
+	//alert("valitsit kiven, tietokone valitsi sakset");
+		window.location.href = "#pagefive";
 }
 //Logiikka paperille
 else if (pos == "1" && computerWeapon < 0.33){
-	alert("Valitsit paperin, tietokone valitsi kiven");
+	//alert("Valitsit paperin, tietokone valitsi kiven");
+	window.location.href = "#pagesix";
 }
 else if (pos == "1" && computerWeapon >= 0.33 && computerWeapon <= 0.66){
-	alert("Valitsit paperin, tietokone valitsi paperin");
+	//alert("Valitsit paperin, tietokone valitsi paperin");
+	window.location.href = "#pageseven";
 }
 else if (pos == "1" && computerWeapon > 0.66){
-	alert("valitsit paperin, tietokone valitsi sakset");
+	//alert("valitsit paperin, tietokone valitsi sakset");
+		window.location.href = "#pageeight";
 }
 //Logiikka saksille
 else if (pos == "2" && computerWeapon < 0.33){
-	alert("Valitsit sakset, tietokone valitsi kiven");
+	//alert("Valitsit sakset, tietokone valitsi kiven");
+	window.location.href = "#pagenine";
 }
 else if (pos == "2" && computerWeapon >= 0.33 && computerWeapon <= 0.66){
-	alert("Valitsit sakset, tietokone valitsi paperin");
+	//alert("Valitsit sakset, tietokone valitsi paperin");
+	window.location.href = "#pageten";
 }
 else if (pos == "2" && computerWeapon > 0.66){
-	alert("valitsit sakset, tietokone valitsi sakset");
+	//alert("valitsit sakset, tietokone valitsi sakset");
+	window.location.href = "#pageeleven";
 }
 }
 
