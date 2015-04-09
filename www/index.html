@@ -47,7 +47,7 @@
 <div data-role="footer">
     <h1>Created by Niki Ahlskog 2015</h1>
   </div>
-</div> 
+</div> <!-- Page one ends -->
 
 <!--Ladataan dialogi kun sivu avataan-->
 <script>
@@ -76,12 +76,17 @@ window.mySwipe = Swipe(elem, {
 <!-- Kivi vs kivi-->
 <div data-role="page" id="pagethree">
   <div data-role="header">
-    <h1>Rock vs Rock!</h1>
+    <h1>Rock versus Rock!</h1>
   </div>
 
   <div data-role="main" class="ui-content">
- <p>Rock vs Rock!</p>
-    <a href="#pageone" data-transition="slide" data-direction="reverse">Slide to Page One (reversed)</a>
+
+<div class="ui-grid-a">
+	<div class="ui-block-a"><img src="img/kivi.png" alt="kivi"></div>
+	<div class="ui-block-b"><img src="img/kivi.png" alt="kivi"></div>
+</div><!-- /grid-a -->
+<h1 class="textcenter">It's a tie!</h1>
+    <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
   </div> 
 </div>
 
