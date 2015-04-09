@@ -25,3 +25,8 @@
 .textcenter {
 text-align:center;
 }
+
+.responsive-image{
+        height:auto;
+        width:100%;
+}
