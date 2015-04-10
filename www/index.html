@@ -236,57 +236,58 @@ var computerWeapon = Math.random();
 if (pos == "0" && computerWeapon < 0.33){
 	//alert("Valitsit kiven, tietokone valitsi kiven");
   console.log(score);
-  document.getElementById("scoreboard").innerHTML = "Your score: " + score;
+  setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
 	window.location.href = "#pagethree";
 }
 else if (pos == "0" && computerWeapon >= 0.33 && computerWeapon <= 0.66){
 	//alert("Valitsit kiven, tietokone valitsi paperin");
   score --;
   console.log(score);
-  document.getElementById("scoreboard").innerHTML = "Your score: " + score;
+  setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
 		window.location.href = "#pagefour";
 }
 else if (pos == "0" && computerWeapon > 0.66){
 	//alert("valitsit kiven, tietokone valitsi sakset");
   score ++;
   console.log(score);
-  document.getElementById("scoreboard").innerHTML = "Your score: " + score;
+  setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
 		window.location.href = "#pagefive";
 }
 //Logiikka paperille
 else if (pos == "1" && computerWeapon < 0.33){
 	//alert("Valitsit paperin, tietokone valitsi kiven");
   score ++;
-  document.getElementById("scoreboard").innerHTML = "Your score: " + score;
+  setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
+  //document.getElementById("scoreboard").innerHTML = "Your score: " + score;
 	window.location.href = "#pagesix";
 }
 else if (pos == "1" && computerWeapon >= 0.33 && computerWeapon <= 0.66){
 	//alert("Valitsit paperin, tietokone valitsi paperin");
-  document.getElementById("scoreboard").innerHTML = "Your score: " + score;
+  setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
 	window.location.href = "#pageseven";
 }
 else if (pos == "1" && computerWeapon > 0.66){
 	//alert("valitsit paperin, tietokone valitsi sakset");
   score --;
-  document.getElementById("scoreboard").innerHTML = "Your score: " + score;
+  setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
 		window.location.href = "#pageeight";
 }
 //Logiikka saksille
 else if (pos == "2" && computerWeapon < 0.33){
 	//alert("Valitsit sakset, tietokone valitsi kiven");
   score --;
-  document.getElementById("scoreboard").innerHTML = "Your score: " + score;
+  setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
 	window.location.href = "#pagenine";
 }
 else if (pos == "2" && computerWeapon >= 0.33 && computerWeapon <= 0.66){
 	//alert("Valitsit sakset, tietokone valitsi paperin");
   score ++;
-  document.getElementById("scoreboard").innerHTML = "Your score: " + score;
+  setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
 	window.location.href = "#pageten";
 }
 else if (pos == "2" && computerWeapon > 0.66){
 	//alert("valitsit sakset, tietokone valitsi sakset");
-  document.getElementById("scoreboard").innerHTML = "Your score: " + score;
+  setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
 	window.location.href = "#pageeleven";
 }
 }
