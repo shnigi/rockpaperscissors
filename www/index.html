@@ -256,27 +256,37 @@ else if (pos == "0" && computerWeapon > 0.66){
 //Logiikka paperille
 else if (pos == "1" && computerWeapon < 0.33){
 	//alert("Valitsit paperin, tietokone valitsi kiven");
+  score ++;
+  document.getElementById("scoreboard").innerHTML = "Your score: " + score;
 	window.location.href = "#pagesix";
 }
 else if (pos == "1" && computerWeapon >= 0.33 && computerWeapon <= 0.66){
 	//alert("Valitsit paperin, tietokone valitsi paperin");
+  document.getElementById("scoreboard").innerHTML = "Your score: " + score;
 	window.location.href = "#pageseven";
 }
 else if (pos == "1" && computerWeapon > 0.66){
 	//alert("valitsit paperin, tietokone valitsi sakset");
+  score --;
+  document.getElementById("scoreboard").innerHTML = "Your score: " + score;
 		window.location.href = "#pageeight";
 }
 //Logiikka saksille
 else if (pos == "2" && computerWeapon < 0.33){
 	//alert("Valitsit sakset, tietokone valitsi kiven");
+  score --;
+  document.getElementById("scoreboard").innerHTML = "Your score: " + score;
 	window.location.href = "#pagenine";
 }
 else if (pos == "2" && computerWeapon >= 0.33 && computerWeapon <= 0.66){
 	//alert("Valitsit sakset, tietokone valitsi paperin");
+  score ++;
+  document.getElementById("scoreboard").innerHTML = "Your score: " + score;
 	window.location.href = "#pageten";
 }
 else if (pos == "2" && computerWeapon > 0.66){
 	//alert("valitsit sakset, tietokone valitsi sakset");
+  document.getElementById("scoreboard").innerHTML = "Your score: " + score;
 	window.location.href = "#pageeleven";
 }
 }
