@@ -34,6 +34,7 @@
 </div>
 
 <div style='text-align:center;padding-top:20px;'>
+  <p id="scoreboard"></p>
   <button onclick="aseValinta();" data-role="button" data-inline="true">Fight</button>
 <button onclick="mySwipe.next()" data-role="button" data-inline="true">Next</button>
 <a href="javascript:history.go(0)" data-role="button" data-inline="true">Refresh</a>
@@ -221,6 +222,8 @@ window.mySwipe = Swipe(elem, {
 
 
 <script>
+//Pisteet
+var score = 0;
 //Tarkistetaan mikä ase on valittuna
 function aseValinta() {
 var pos = mySwipe.getPos();
@@ -232,14 +235,22 @@ var computerWeapon = Math.random();
 //Logiikka kivelle
 if (pos == "0" && computerWeapon < 0.33){
 	//alert("Valitsit kiven, tietokone valitsi kiven");
+  console.log(score);
+  document.getElementById("scoreboard").innerHTML = "Your score: " + score;
 	window.location.href = "#pagethree";
 }
 else if (pos == "0" && computerWeapon >= 0.33 && computerWeapon <= 0.66){
 	//alert("Valitsit kiven, tietokone valitsi paperin");
+  score --;
+  console.log(score);
+  document.getElementById("scoreboard").innerHTML = "Your score: " + score;
 		window.location.href = "#pagefour";
 }
 else if (pos == "0" && computerWeapon > 0.66){
 	//alert("valitsit kiven, tietokone valitsi sakset");
+  score ++;
+  console.log(score);
+  document.getElementById("scoreboard").innerHTML = "Your score: " + score;
 		window.location.href = "#pagefive";
 }
 //Logiikka paperille
@@ -269,8 +280,6 @@ else if (pos == "2" && computerWeapon > 0.66){
 	window.location.href = "#pageeleven";
 }
 }
-
-
 
 
 //ravistustoiminto
