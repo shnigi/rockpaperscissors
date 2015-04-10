@@ -1,3 +1,13 @@
+.ui-content{
+  background: url(../img/bg.png);
+  background-repeat:repeat-y;
+  background-position:center center;
+  background-attachment:scroll;
+  background-size:100% 100%;
+}
+
+
+
 #mySwipe div b {
   display:block;
   text-align:center;
