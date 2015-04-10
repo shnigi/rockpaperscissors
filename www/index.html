@@ -68,8 +68,8 @@
   <!--Dialogiboxi-->
   <div data-role="page" data-dialog="true" id="pagetwo">
     <div data-role="main" class="ui-content dialogi">
-      <p>Rock-paper-scissors mobile! Swipe left or right to select your weapon, shake your phone to fight!</p>
-      <a href="#pageone"><button>Ok!</button></a>
+      <p>Rock-paper-scissors mobile! Swipe left or right to select your weapon, shake your phone to fight! If the game doesn't load for some reason, please press refresh and try again!</p>
+      <a href="#pageone" id="okbutton"><button>Ok!</button></a>
     </div>
   </div>
   <!--Dialogiboxi loppuu-->
@@ -92,6 +92,8 @@
       <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
     </div>
   </div>
+
+
 
   <!-- Kivi vs paperi -->
   <div data-role="page" id="pagefour">
@@ -293,6 +295,8 @@
       $.mobile.changePage( "#pageeleven", { transition: "slide", changeHash: false });
     }
   }
+
+
 
 
   //ravistustoiminto
