@@ -1,4 +1,4 @@
-.ui-content{
+html,body,div[data-role ="page"]{
   background: url(../img/bg.png);
   background-repeat:repeat-y;
   background-position:center center;
@@ -6,6 +6,9 @@
   background-size:100% 100%;
 }
 
+.dialogi{
+  background-color:white;
+}
 
 
 #mySwipe div b {
