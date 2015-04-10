@@ -10,21 +10,21 @@
 <script src="js/jquery.mobile-1.4.5.min.js"></script>
 <script src="js/swipe.js"></script>
 <script type="text/javascript" src="js/shake.js"></script>
-<!--Style--> 	
+<!--Style-->
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/shake.css">
 <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
 <title>Rock-paper-scissors</title>
 </head>
 <body>
-    
+
 <div data-role="page" id="pageone">
   <div data-role="header">
     <h1>Rock-paper-scissors</h1>
   </div>
 
   <div data-role="main" class="ui-content">
-  
+
 <div id='mySwipe' class='swipe'>
   <div class='swipe-wrap'>
     <div><b><img src="img/kivi.png" alt="kivi" class="shake"></b></div>
@@ -36,9 +36,9 @@
 <div style='text-align:center;padding-top:20px;'>
 <button onclick="aseValinta();">Shake!</button>
 <!--  <button onclick='mySwipe.prev()'>prev</button> -->
- <button onclick='mySwipe.next()'>next</button> 
+ <button onclick='mySwipe.next()'>next</button>
 </div>
-  
+
   </div>
 <!--Content ends-->
 
@@ -58,7 +58,7 @@ $(document).ready(function() {
   var elem = document.getElementById('mySwipe');
 window.mySwipe = Swipe(elem, {
 });
-   
+
 });
 </script>
 
@@ -68,7 +68,7 @@ window.mySwipe = Swipe(elem, {
     <p>Rock-paper-scissors mobile! Swipe left or right to select your weapon, shake your phone to fight!</p>
     <a href="#pageone"><button>Ok!</button></a>
   </div>
-</div> 
+</div>
  <!--Dialogiboxi loppuu-->
 
 
@@ -76,151 +76,151 @@ window.mySwipe = Swipe(elem, {
 <!-- Kivi vs kivi-->
 <div data-role="page" id="pagethree">
   <div data-role="header">
-    <h1>Rock versus Rock!</h1>
+    <h1>Battle!</h1>
   </div>
 
   <div data-role="main" class="ui-content">
 
 <div class="ui-grid-a">
-	<div class="ui-block-a"><img src="img/kivi.png" alt="kivi" class="responsive-image shake"></div>
-	<div class="ui-block-b"><img src="img/kivi.png" alt="kivi" class="responsive-image shake"></div>
+	<div class="ui-block-a fade-in one textcenter"><img src="img/kivi.png" alt="kivi" class="responsive-image shake">You selected rock</div>
+	<div class="ui-block-b fade-in two textcenter"><img src="img/kivi.png" alt="kivi" class="responsive-image shake">Opponent selected rock</div>
 </div><!-- /grid-a -->
-<h1 class="textcenter">It's a tie!</h1>
+<h1 class="textcenter fade-in three">It's a tie!</h1>
     <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
-  </div> 
+  </div>
 </div>
 
 <!-- Kivi vs paperi -->
 <div data-role="page" id="pagefour">
   <div data-role="header">
-    <h1>Rock vs Paper!</h1>
+    <h1>Battle!</h1>
   </div>
 
   <div data-role="main" class="ui-content">
  <div class="ui-grid-a">
-	<div class="ui-block-a"><img src="img/kivi.png" alt="kivi" class="responsive-image"></div>
-	<div class="ui-block-b"><img src="img/papru.png" alt="paperi" class="responsive-image"></div>
+	<div class="ui-block-a fade-in one textcenter"><img src="img/kivi.png" alt="kivi" class="responsive-image shake">You selected rock</div>
+	<div class="ui-block-b fade-in two textcenter"><img src="img/papru.png" alt="paperi" class="responsive-image shake">Opponent selected paper</div>
 </div><!-- /grid-a -->
-<h1 class="textcenter">You lose, paper wins!</h1>
+<h1 class="textcenter fade-in three">You lose, paper wins!</h1>
     <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
-  </div> 
+  </div>
 </div>
 
 <!-- Kivi vs sakset -->
 <div data-role="page" id="pagefive">
   <div data-role="header">
-    <h1>Rock vs Scissors!</h1>
+    <h1>Battle!</h1>
   </div>
 
   <div data-role="main" class="ui-content">
 <div class="ui-grid-a">
-	<div class="ui-block-a"><img src="img/kivi.png" alt="kivi" class="responsive-image"></div>
-	<div class="ui-block-b"><img src="img/saksi.png" alt="sakset" class="responsive-image"></div>
+	<div class="ui-block-a fade-in one textcenter"><img src="img/kivi.png" alt="kivi" class="responsive-image shake">You selected rock</div>
+	<div class="ui-block-b fade-in two textcenter"><img src="img/saksi.png" alt="sakset" class="responsive-image shake">Opponent selected scissors</div>
 </div><!-- /grid-a -->
-<h1 class="textcenter">You win!</h1>
+<h1 class="textcenter fade-in three">You win!</h1>
     <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
-  </div> 
+  </div>
 </div>
 
 <!-- paperi vs kivi -->
 <div data-role="page" id="pagesix">
   <div data-role="header">
-    <h1>Paper vs Rock!</h1>
+    <h1>Battle!</h1>
   </div>
 
   <div data-role="main" class="ui-content">
 <div class="ui-grid-a">
-	<div class="ui-block-a"><img src="img/papru.png" alt="paperi" class="responsive-image"></div>
-	<div class="ui-block-b"><img src="img/kivi.png" alt="kivi" class="responsive-image"></div>
+	<div class="ui-block-a fade-in one textcenter"><img src="img/papru.png" alt="paperi" class="responsive-image shake">You selected paper</div>
+	<div class="ui-block-b fade-in two textcenter"><img src="img/kivi.png" alt="kivi" class="responsive-image shake">Opponent selected rock</div>
 </div><!-- /grid-a -->
-<h1 class="textcenter">You win!</h1>
+<h1 class="textcenter fade-in three">You win!</h1>
     <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
-  </div> 
+  </div>
 </div>
 
 <!-- paperi vs paperi -->
 <div data-role="page" id="pageseven">
   <div data-role="header">
-    <h1>Paper vs Paper!</h1>
+    <h1>Battle!</h1>
   </div>
 
   <div data-role="main" class="ui-content">
 <div class="ui-grid-a">
-	<div class="ui-block-a"><img src="img/papru.png" alt="paperi" class="responsive-image shake"></div>
-	<div class="ui-block-b"><img src="img/papru.png" alt="paperi" class="responsive-image shake"></div>
+	<div class="ui-block-a fade-in one textcenter"><img src="img/papru.png" alt="paperi" class="responsive-image shake">You selected paper</div>
+	<div class="ui-block-b fade-in two textcenter"><img src="img/papru.png" alt="paperi" class="responsive-image shake">Opponent selected paper</div>
 </div><!-- /grid-a -->
-<h1 class="textcenter">It's a tie!</h1>
+<h1 class="textcenter fade-in three">It's a tie!</h1>
     <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
-  </div> 
+  </div>
 </div>
 
 <!-- paperi vs sakset -->
 <div data-role="page" id="pageeight">
   <div data-role="header">
-    <h1>Paper vs Scissors!</h1>
+    <h1>Battle!</h1>
   </div>
 
   <div data-role="main" class="ui-content">
 <div class="ui-grid-a">
-	<div class="ui-block-a"><img src="img/papru.png" alt="paperi" class="responsive-image"></div>
-	<div class="ui-block-b"><img src="img/saksi.png" alt="sakset" class="responsive-image"></div>
+	<div class="ui-block-a fade-in one textcenter"><img src="img/papru.png" alt="paperi" class="responsive-image shake">You selected paper</div>
+	<div class="ui-block-b fade-in two textcenter"><img src="img/saksi.png" alt="sakset" class="responsive-image shake">Opponent selected scissors</div>
 </div><!-- /grid-a -->
-<h1 class="textcenter">You lose, scissors win!</h1>
+<h1 class="textcenter fade-in three">You lose, scissors win!</h1>
     <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
-  </div> 
+  </div>
 </div>
 
 
 <!-- sakset vs kivi -->
 <div data-role="page" id="pagenine">
   <div data-role="header">
-    <h1>Scissors vs Rock!</h1>
+    <h1>Battle!</h1>
   </div>
 
   <div data-role="main" class="ui-content">
 <div class="ui-grid-a">
-	<div class="ui-block-a"><img src="img/saksi.png" alt="sakset" class="responsive-image"></div>
-	<div class="ui-block-b"><img src="img/kivi.png" alt="kivi" class="responsive-image"></div>
+	<div class="ui-block-a fade-in one textcenter"><img src="img/saksi.png" alt="sakset" class="responsive-image shake">You selected scissors</div>
+	<div class="ui-block-b fade-in two textcenter"><img src="img/kivi.png" alt="kivi" class="responsive-image shake">Opponent selected rock</div>
 </div><!-- /grid-a -->
-<h1 class="textcenter">You lose, rock wins!</h1>
+<h1 class="textcenter fade-in three">You lose, rock wins!</h1>
     <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
-  </div> 
+  </div>
 </div>
 
 <!-- sakset vs paperi -->
 <div data-role="page" id="pageten">
   <div data-role="header">
-    <h1>Scissors vs Paper!</h1>
+    <h1>Battle!</h1>
   </div>
 
   <div data-role="main" class="ui-content">
 <div class="ui-grid-a">
-	<div class="ui-block-a"><img src="img/saksi.png" alt="sakset" class="responsive-image"></div>
-	<div class="ui-block-b"><img src="img/papru.png" alt="paperi" class="responsive-image"></div>
+	<div class="ui-block-a fade-in one textcenter"><img src="img/saksi.png" alt="sakset" class="responsive-image shake">You selected scissors</div>
+	<div class="ui-block-b fade-in two textcenter"><img src="img/papru.png" alt="paperi" class="responsive-image shake">Opponent selected paper</div>
 </div><!-- /grid-a -->
-<h1 class="textcenter">You win!</h1>
+<h1 class="textcenter fade-in three">You win!</h1>
     <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
-  </div> 
+  </div>
 </div>
 
 <!-- sakset vs sakset -->
 <div data-role="page" id="pageeleven">
   <div data-role="header">
-    <h1>Scissors vs Scissors!</h1>
+    <h1>Battle!</h1>
   </div>
 
   <div data-role="main" class="ui-content">
  <div class="ui-grid-a">
-	<div class="ui-block-a"><img src="img/saksi.png" alt="sakset" class="responsive-image shake"></div>
-	<div class="ui-block-b"><img src="img/saksi.png" alt="sakset" class="responsive-image shake"></div>
+	<div class="ui-block-a fade-in one textcenter"><img src="img/saksi.png" alt="sakset" class="responsive-image shake">You selected scissors</div>
+	<div class="ui-block-b fade-in two textcenter"><img src="img/saksi.png" alt="sakset" class="responsive-image shake">Opponent selected scissors</div>
 </div><!-- /grid-a -->
-<h1 class="textcenter">It's a tie!</h1>
+<h1 class="textcenter fade-in three">It's a tie!</h1>
     <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
-  </div> 
+  </div>
 </div>
 
 
-<script>	
+<script>
 //Tarkistetaan mikä ase on valittuna
 function aseValinta() {
 var pos = mySwipe.getPos();
@@ -271,9 +271,9 @@ else if (pos == "2" && computerWeapon > 0.66){
 }
 
 
-	
-	
-//ravistustoiminto	
+
+
+//ravistustoiminto
 window.onload = function() {
     //create a new instance of shake.js.
     var myShakeEvent = new Shake({
@@ -290,7 +290,7 @@ window.onload = function() {
     }
 };
 </script>
-           
+
 </div>
 <!-- Cordova juttuja -->
 <script type="text/javascript" src="cordova.js"></script>
