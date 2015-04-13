@@ -18,7 +18,6 @@
 </head>
 <body>
 
-
   <div data-role="page" id="pageone">
     <div data-role="header">
       <h1>Rock-paper-scissors</h1>
@@ -37,9 +36,9 @@
 
       <div style='text-align:center;padding-top:20px;'>
         <h2 id="scoreboard">Your score: 0</h2>
-        <button onclick="aseValinta();" data-role="button" data-inline="true">Fight</button>
-        <button onclick="mySwipe.next()" data-role="button" data-inline="true">Next</button>
-        <a href="javascript:history.go(0)" data-role="button" data-inline="true">Refresh</a>
+        <button onclick="aseValinta();" data-role="button" data-inline="true" data-icon="check">Fight</button>
+        <button onclick="mySwipe.next()" data-role="button" data-inline="true" data-icon="arrow-r">Next</button>
+        <a href="javascript:history.go(0)" data-role="button" data-inline="true" data-icon="recycle">Refresh</a>
       </div>
 
     </div>
@@ -61,14 +60,19 @@
     var elem = document.getElementById('mySwipe');
     window.mySwipe = Swipe(elem, {
     });
-
   });
   </script>
 
   <!--Dialogiboxi-->
   <div data-role="page" data-dialog="true" id="pagetwo">
-    <div data-role="main" class="ui-content dialogi">
-      <p>Rock-paper-scissors mobile! Swipe left or right to select your weapon, shake your phone to fight! If the game doesn't load for some reason, please press refresh and try again!</p>
+    <div data-role="main" class="ui-content dialogi dialog-center">
+      <h1>Rock-paper-scissors mobile! </h1>
+      <p>Swipe left or right to select your weapon</p>
+      <img src="img/swipe.png" alt="swipe">
+      <p> shake your phone to fight! </p>
+      <img src="img/shake.png" alt="shake">
+      <p>If the game doesn't load for some reason, please press refresh and try again!</p>
+      <img src="img/refresh.png" alt="refresh">
       <a href="#pageone" id="okbutton"><button>Ok!</button></a>
     </div>
   </div>
@@ -239,21 +243,18 @@
     //Logiikka kivelle
     if (pos == "0" && computerWeapon < 0.33){
       //alert("Valitsit kiven, tietokone valitsi kiven");
-      console.log(score);
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pagethree", { transition: "slide", changeHash: false });
     }
     else if (pos == "0" && computerWeapon >= 0.33 && computerWeapon <= 0.66){
       //alert("Valitsit kiven, tietokone valitsi paperin");
       score --;
-      console.log(score);
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pagefour", { transition: "slide", changeHash: false });
     }
     else if (pos == "0" && computerWeapon > 0.66){
       //alert("valitsit kiven, tietokone valitsi sakset");
       score ++;
-      console.log(score);
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pagefive", { transition: "slide", changeHash: false });
     }
@@ -312,7 +313,7 @@
     //shake event callback
     function shakeEventDidOccur () {
       //put your own code here etc.
-      aseValinta();
+aseValinta();
     }
   };
   </script>
