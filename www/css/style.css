@@ -8,6 +8,7 @@ html,body,div[data-role ="page"]{
 
 .dialogi{
   background-color:white;
+  text-align: center;
 }
 
 
@@ -72,13 +73,13 @@ html,body,div[data-role ="page"]{
 }
 
 .fade-in.two {
-  -webkit-animation-delay: 3.6s;
-  -moz-animation-delay: 3.6s;
-  animation-delay: 3.6s;
+  -webkit-animation-delay: 2.6s;
+  -moz-animation-delay: 2.6s;
+  animation-delay: 2.6s;
 }
 
 .fade-in.three {
-  -webkit-animation-delay: 4.6s;
-  -moz-animation-delay: 4.6s;
-  animation-delay: 4.6s;
+  -webkit-animation-delay: 3.0s;
+  -moz-animation-delay: 3.0s;
+  animation-delay: 3.0s;
 }
