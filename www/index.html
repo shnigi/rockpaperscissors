@@ -243,21 +243,18 @@
     //Logiikka kivelle
     if (pos == "0" && computerWeapon < 0.33){
       //alert("Valitsit kiven, tietokone valitsi kiven");
-      console.log(score);
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pagethree", { transition: "slide", changeHash: false });
     }
     else if (pos == "0" && computerWeapon >= 0.33 && computerWeapon <= 0.66){
       //alert("Valitsit kiven, tietokone valitsi paperin");
       score --;
-      console.log(score);
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pagefour", { transition: "slide", changeHash: false });
     }
     else if (pos == "0" && computerWeapon > 0.66){
       //alert("valitsit kiven, tietokone valitsi sakset");
       score ++;
-      console.log(score);
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pagefive", { transition: "slide", changeHash: false });
     }
