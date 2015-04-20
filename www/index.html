@@ -10,6 +10,7 @@
   <script src="js/jquery.mobile-1.4.5.min.js"></script>
   <script src="js/swipe.js"></script>
   <script src="js/shake.js"></script>
+
   <!--Style-->
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/shake.css">
@@ -17,6 +18,24 @@
   <title>Rock-paper-scissors</title>
 </head>
 <body>
+</head>
+<body>
+	
+	<script>
+function playAudio(id) {
+    var audioElement = document.getElementById(id);
+    var url = audioElement.getAttribute('src');
+    var my_media = new Media(url,
+            // success callback
+             function () { console.log("playAudio():Audio Success"); },
+            // error callback
+             function (err) { console.log("playAudio():Audio Error: " + err); }
+    );
+           // Play audio
+    my_media.play();
+}
+	</script>
+
 
   <div data-role="page" id="pageone">
     <div data-role="header">
@@ -24,8 +43,10 @@
     </div>
 
     <div data-role="main" class="ui-content">
+		 <audio id="successSound" src="/android_asset/www/sounds/biisi.mp3" type="audio/mpeg" ></audio>
+		<button onclick="playAudio('successSound')">Play successSound local</button>
 
-<!--Kuvien luokaksi voi laittaa responsive-image -->
+      <!--Kuvien luokaksi voi laittaa responsive-image -->
       <div id='mySwipe' class='swipe'>
         <div class='swipe-wrap'>
           <div><b><img src="img/kivi.png" alt="kivi" class="shake"></b></div>
@@ -313,7 +334,7 @@
     //shake event callback
     function shakeEventDidOccur () {
       //put your own code here etc.
-aseValinta();
+      aseValinta();
     }
   };
   </script>
