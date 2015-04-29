@@ -75,7 +75,8 @@ function playAudio(id) {
 
     <!-- Start of footer -->
     <div data-role="footer">
-      <h1>Created by Niki Ahlskog 2015</h1>
+      <h1>Created by Niki Ahlskog</h1>
+      <h2>Game Art by Teemu Asumaa</h2>
     </div>
   </div> <!-- Page one ends -->
 
@@ -523,8 +524,7 @@ function playAudio(id) {
     var pos = mySwipe.getPos();
     //randomilla tietokoneen ase
     var computerWeapon = Math.floor(Math.random() * 5) + 1
-    //tietokone <.033 kivi, 0.66 papru, saksi
-    //pos 0 = kivi, pos 1 = papru, pos 2 = saksi
+    //pos 0 = kivi, pos 1 = papru, pos 2 = saksi, pos 3 = spock, pos 4 = lizzard
 
     //Logiikka kivelle
     if (pos == "0" && computerWeapon == 1){
