@@ -15,19 +15,19 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/shake.css">
   <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
-  <title>Rock-paper-scissors</title>
+  <title>Rock-paper-scissors-lizzard-spock</title>
 </head>
 <body>
 </head>
 <body>
-	<audio id="bgSound" src="/android_asset/www/sounds/teemabiisu.mp3" type="audio/mpeg" ></audio>
-	
+	<audio id="bgSound" src="/android_asset/www/sounds/teemabiisu.mp3" type="audio/mpeg"></audio>
+
 	<script>
 		//Kun softa on ladattu, soitetaan taustamusa
 		document.addEventListener("deviceready", function(){
       playAudio('bgSound');
  },true);
-		
+
 		//ladataan musa ID:n perusteella
 function playAudio(id) {
     var audioElement = document.getElementById(id);
@@ -39,14 +39,14 @@ function playAudio(id) {
              function (err) { console.log("playAudio():Audio Error: " + err); }
     );
            // Play audio
-    my_media.play();   
+    my_media.play();
 }
 	</script>
 
 
   <div data-role="page" id="pageone">
     <div data-role="header">
-      <h1>Rock-paper-scissors</h1>
+      <h1>Rock-paper-scissors-lizzard-spock</h1>
     </div>
 
     <div data-role="main" class="ui-content">
@@ -54,14 +54,16 @@ function playAudio(id) {
       <!--Kuvien luokaksi voi laittaa responsive-image -->
       <div id='mySwipe' class='swipe'>
         <div class='swipe-wrap'>
-          <div><b><img src="img/kivi.png" alt="kivi" class="shake"></b></div>
-          <div><b><img src="img/papru.png" alt="paperi" class="shake"></b></div>
-          <div><b><img src="img/saksi.png" alt="sakset" class="shake"></b></div>
+          <div><b><img src="img/kivi.png" alt="kivi" class="shake"></b><p class="tekstit textcenter">ROCK</p></div>
+          <div><b><img src="img/papru.png" alt="paperi" class="shake"></b><p class="tekstit textcenter">PAPER</p></div>
+          <div><b><img src="img/saksi.png" alt="sakset" class="shake"></b><p class="tekstit textcenter">SCISSORS</p></div>
+          <div><b><img src="img/lisko.png" alt="lisko" class="shake"></b><p class="tekstit textcenter">LIZZARD</p></div>
+          <div><b><img src="img/spock.png" alt="spock" class="shake"></b><p class="tekstit textcenter">SPOCK</p></div>
         </div>
       </div>
 
       <div style='text-align:center;padding-top:20px;'>
-        <h2 id="scoreboard">Your score: 0</h2>
+        <h2 id="scoreboard" class="tekstit">Your score: 0</h2>
         <button onclick="aseValinta();" data-role="button" data-inline="true" data-icon="check">Fight</button>
         <button onclick="mySwipe.next()" data-role="button" data-inline="true" data-icon="arrow-r">Next</button>
         <a href="javascript:history.go(0)" data-role="button" data-inline="true" data-icon="recycle">Refresh</a>
@@ -92,7 +94,7 @@ function playAudio(id) {
   <!--Dialogiboxi-->
   <div data-role="page" data-dialog="true" id="pagetwo">
     <div data-role="main" class="ui-content dialogi dialog-center">
-      <h1>Rock-paper-scissors mobile! </h1>
+      <h1>Rock-paper-scissors-lizzard-spock mobile! </h1>
       <p>Swipe left or right to select your weapon</p>
       <img src="img/swipe.png" alt="swipe">
       <p> shake your phone to fight! </p>
@@ -115,10 +117,10 @@ function playAudio(id) {
     <div data-role="main" class="ui-content">
 
       <div class="ui-grid-a">
-        <div class="ui-block-a fade-in one textcenter"><img src="img/kivi.png" alt="kivi" class="responsive-image shake"><h3>You selected rock</h3></div>
-        <div class="ui-block-b fade-in two textcenter"><img src="img/kivi.png" alt="kivi" class="responsive-image shake"><h3>Opponent selected rock</h3></div>
+        <div class="ui-block-a fade-in one textcenter"><img src="img/kivi.png" alt="kivi" class="responsive-image shake"><h3 class="tekstit">You selected rock</h3></div>
+        <div class="ui-block-b fade-in two textcenter"><img src="img/kivi.png" alt="kivi" class="responsive-image shake"><h3 class="tekstit">Opponent selected rock</h3></div>
       </div><!-- /grid-a -->
-      <h1 class="textcenter fade-in three">It's a tie!</h1>
+      <h1 class="textcenter fade-in three tekstit">It's a tie!</h1>
       <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
     </div>
   </div>
@@ -133,10 +135,10 @@ function playAudio(id) {
 
     <div data-role="main" class="ui-content">
       <div class="ui-grid-a">
-        <div class="ui-block-a fade-in one textcenter"><img src="img/kivi.png" alt="kivi" class="responsive-image shake"><h3>You selected rock</h3></div>
-        <div class="ui-block-b fade-in two textcenter"><img src="img/papru.png" alt="paperi" class="responsive-image shake"><h3>Opponent selected paper</h3></div>
+        <div class="ui-block-a fade-in one textcenter"><img src="img/kivi.png" alt="kivi" class="responsive-image shake"><h3 class="tekstit">You selected rock</h3></div>
+        <div class="ui-block-b fade-in two textcenter"><img src="img/papru.png" alt="paperi" class="responsive-image shake"><h3 class="tekstit">Opponent selected paper</h3></div>
       </div><!-- /grid-a -->
-      <h1 class="textcenter fade-in three">You lose, paper wins!</h1>
+      <h1 class="textcenter fade-in three tekstit">You lose, paper wins!</h1>
       <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
     </div>
   </div>
@@ -149,10 +151,10 @@ function playAudio(id) {
 
     <div data-role="main" class="ui-content">
       <div class="ui-grid-a">
-        <div class="ui-block-a fade-in one textcenter"><img src="img/kivi.png" alt="kivi" class="responsive-image shake"><h3>You selected rock</h3></div>
-        <div class="ui-block-b fade-in two textcenter"><img src="img/saksi.png" alt="sakset" class="responsive-image shake"><h3>Opponent selected scissors</h3></div>
+        <div class="ui-block-a fade-in one textcenter"><img src="img/kivi.png" alt="kivi" class="responsive-image shake"><h3 class="tekstit">You selected rock</h3></div>
+        <div class="ui-block-b fade-in two textcenter"><img src="img/saksi.png" alt="sakset" class="responsive-image shake"><h3 class="tekstit">Opponent selected scissors</h3></div>
       </div><!-- /grid-a -->
-      <h1 class="textcenter fade-in three">You win!</h1>
+      <h1 class="textcenter fade-in three tekstit">You win!</h1>
       <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
     </div>
   </div>
@@ -165,10 +167,10 @@ function playAudio(id) {
 
     <div data-role="main" class="ui-content">
       <div class="ui-grid-a">
-        <div class="ui-block-a fade-in one textcenter"><img src="img/papru.png" alt="paperi" class="responsive-image shake"><h3>You selected paper</h3></div>
-        <div class="ui-block-b fade-in two textcenter"><img src="img/kivi.png" alt="kivi" class="responsive-image shake"><h3>Opponent selected rock</h3></div>
+        <div class="ui-block-a fade-in one textcenter"><img src="img/papru.png" alt="paperi" class="responsive-image shake"><h3 class="tekstit">You selected paper</h3></div>
+        <div class="ui-block-b fade-in two textcenter"><img src="img/kivi.png" alt="kivi" class="responsive-image shake"><h3 class="tekstit">Opponent selected rock</h3></div>
       </div><!-- /grid-a -->
-      <h1 class="textcenter fade-in three">You win!</h1>
+      <h1 class="textcenter fade-in three tekstit">You win!</h1>
       <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
     </div>
   </div>
@@ -181,10 +183,10 @@ function playAudio(id) {
 
     <div data-role="main" class="ui-content">
       <div class="ui-grid-a">
-        <div class="ui-block-a fade-in one textcenter"><img src="img/papru.png" alt="paperi" class="responsive-image shake"><h3>You selected paper</h3></div>
-        <div class="ui-block-b fade-in two textcenter"><img src="img/papru.png" alt="paperi" class="responsive-image shake"><h3>Opponent selected paper</h3></div>
+        <div class="ui-block-a fade-in one textcenter"><img src="img/papru.png" alt="paperi" class="responsive-image shake"><h3 class="tekstit">You selected paper</h3></div>
+        <div class="ui-block-b fade-in two textcenter"><img src="img/papru.png" alt="paperi" class="responsive-image shake"><h3 class="tekstit">Opponent selected paper</h3></div>
       </div><!-- /grid-a -->
-      <h1 class="textcenter fade-in three">It's a tie!</h1>
+      <h1 class="textcenter fade-in three tekstit">It's a tie!</h1>
       <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
     </div>
   </div>
@@ -197,10 +199,10 @@ function playAudio(id) {
 
     <div data-role="main" class="ui-content">
       <div class="ui-grid-a">
-        <div class="ui-block-a fade-in one textcenter"><img src="img/papru.png" alt="paperi" class="responsive-image shake"><h3>You selected paper</h3></div>
-        <div class="ui-block-b fade-in two textcenter"><img src="img/saksi.png" alt="sakset" class="responsive-image shake"><h3>Opponent selected scissors</h3></div>
+        <div class="ui-block-a fade-in one textcenter"><img src="img/papru.png" alt="paperi" class="responsive-image shake"><h3 class="tekstit">You selected paper</h3></div>
+        <div class="ui-block-b fade-in two textcenter"><img src="img/saksi.png" alt="sakset" class="responsive-image shake"><h3 class="tekstit">Opponent selected scissors</h3></div>
       </div><!-- /grid-a -->
-      <h1 class="textcenter fade-in three">You lose, scissors win!</h1>
+      <h1 class="textcenter fade-in three tekstit">You lose, scissors win!</h1>
       <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
     </div>
   </div>
@@ -214,10 +216,10 @@ function playAudio(id) {
 
     <div data-role="main" class="ui-content">
       <div class="ui-grid-a">
-        <div class="ui-block-a fade-in one textcenter"><img src="img/saksi.png" alt="sakset" class="responsive-image shake"><h3>You selected scissors</h3></div>
-        <div class="ui-block-b fade-in two textcenter"><img src="img/kivi.png" alt="kivi" class="responsive-image shake"><h3>Opponent selected rock</h3></div>
+        <div class="ui-block-a fade-in one textcenter"><img src="img/saksi.png" alt="sakset" class="responsive-image shake"><h3 class="tekstit">You selected scissors</h3></div>
+        <div class="ui-block-b fade-in two textcenter"><img src="img/kivi.png" alt="kivi" class="responsive-image shake"><h3 class="tekstit">Opponent selected rock</h3></div>
       </div><!-- /grid-a -->
-      <h1 class="textcenter fade-in three">You lose, rock wins!</h1>
+      <h1 class="textcenter fade-in three tekstit">You lose, rock wins!</h1>
       <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
     </div>
   </div>
@@ -230,10 +232,10 @@ function playAudio(id) {
 
     <div data-role="main" class="ui-content">
       <div class="ui-grid-a">
-        <div class="ui-block-a fade-in one textcenter"><img src="img/saksi.png" alt="sakset" class="responsive-image shake"><h3>You selected scissors</h3></div>
-        <div class="ui-block-b fade-in two textcenter"><img src="img/papru.png" alt="paperi" class="responsive-image shake"><h3>Opponent selected paper</h3></div>
+        <div class="ui-block-a fade-in one textcenter"><img src="img/saksi.png" alt="sakset" class="responsive-image shake"><h3 class="tekstit">You selected scissors</h3></div>
+        <div class="ui-block-b fade-in two textcenter"><img src="img/papru.png" alt="paperi" class="responsive-image shake"><h3 class="tekstit">Opponent selected paper</h3></div>
       </div><!-- /grid-a -->
-      <h1 class="textcenter fade-in three">You win!</h1>
+      <h1 class="textcenter fade-in three tekstit">You win!</h1>
       <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
     </div>
   </div>
@@ -246,14 +248,272 @@ function playAudio(id) {
 
     <div data-role="main" class="ui-content">
       <div class="ui-grid-a">
-        <div class="ui-block-a fade-in one textcenter"><img src="img/saksi.png" alt="sakset" class="responsive-image shake"><h3>You selected scissors</h3></div>
-        <div class="ui-block-b fade-in two textcenter"><img src="img/saksi.png" alt="sakset" class="responsive-image shake"><h3>Opponent selected scissors</h3></div>
+        <div class="ui-block-a fade-in one textcenter"><img src="img/saksi.png" alt="sakset" class="responsive-image shake"><h3 class="tekstit">You selected scissors</h3></div>
+        <div class="ui-block-b fade-in two textcenter"><img src="img/saksi.png" alt="sakset" class="responsive-image shake"><h3 class="tekstit">Opponent selected scissors</h3></div>
       </div><!-- /grid-a -->
-      <h1 class="textcenter fade-in three">It's a tie!</h1>
+      <h1 class="textcenter fade-in three tekstit">It's a tie!</h1>
       <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
     </div>
   </div>
 
+  <!-- sakset vs spock -->
+  <div data-role="page" id="pagetwelve">
+    <div data-role="header">
+      <h1>Battle!</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <div class="ui-grid-a">
+        <div class="ui-block-a fade-in one textcenter"><img src="img/kivi.png" alt="sakset" class="responsive-image shake"><h3 class="tekstit">You selected rock</h3></div>
+        <div class="ui-block-b fade-in two textcenter"><img src="img/spock.png" alt="sakset" class="responsive-image shake"><h3 class="tekstit">Opponent selected spock</h3></div>
+      </div><!-- /grid-a -->
+      <h1 class="textcenter fade-in three tekstit">You lose!</h1>
+      <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
+    </div>
+  </div>
+
+  <!-- sakset vs lizzard -->
+  <div data-role="page" id="pagethirteen">
+    <div data-role="header">
+      <h1>Battle!</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <div class="ui-grid-a">
+        <div class="ui-block-a fade-in one textcenter"><img src="img/kivi.png" alt="sakset" class="responsive-image shake"><h3 class="tekstit">You selected rock</h3></div>
+        <div class="ui-block-b fade-in two textcenter"><img src="img/lisko.png" alt="sakset" class="responsive-image shake"><h3 class="tekstit">Opponent selected lizzard</h3></div>
+      </div><!-- /grid-a -->
+      <h1 class="textcenter fade-in three tekstit">You win!</h1>
+      <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
+    </div>
+  </div>
+
+  <!-- paperi vs spock -->
+  <div data-role="page" id="pagefourteen">
+    <div data-role="header">
+      <h1>Battle!</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <div class="ui-grid-a">
+        <div class="ui-block-a fade-in one textcenter"><img src="img/papru.png" alt="sakset" class="responsive-image shake"><h3 class="tekstit">You selected paper</h3></div>
+        <div class="ui-block-b fade-in two textcenter"><img src="img/spock.png" alt="sakset" class="responsive-image shake"><h3 class="tekstit">Opponent selected spock</h3></div>
+      </div><!-- /grid-a -->
+      <h1 class="textcenter fade-in three tekstit">You win!</h1>
+      <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
+    </div>
+  </div>
+
+  <!-- paperi vs lizzard -->
+  <div data-role="page" id="pagefifteen">
+    <div data-role="header">
+      <h1>Battle!</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <div class="ui-grid-a">
+        <div class="ui-block-a fade-in one textcenter"><img src="img/papru.png" alt="sakset" class="responsive-image shake"><h3 class="tekstit">You selected paper</h3></div>
+        <div class="ui-block-b fade-in two textcenter"><img src="img/lisko.png" alt="sakset" class="responsive-image shake"><h3 class="tekstit">Opponent selected lizzard</h3></div>
+      </div><!-- /grid-a -->
+      <h1 class="textcenter fade-in three tekstit">You lose!</h1>
+      <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
+    </div>
+  </div>
+
+  <!-- sakset vs spock -->
+  <div data-role="page" id="pagesixteen">
+    <div data-role="header">
+      <h1>Battle!</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <div class="ui-grid-a">
+        <div class="ui-block-a fade-in one textcenter"><img src="img/saksi.png" alt="sakset" class="responsive-image shake"><h3 class="tekstit">You selected scissors</h3></div>
+        <div class="ui-block-b fade-in two textcenter"><img src="img/spock.png" alt="sakset" class="responsive-image shake"><h3 class="tekstit">Opponent selected spock</h3></div>
+      </div><!-- /grid-a -->
+      <h1 class="textcenter fade-in three tekstit">You lose!</h1>
+      <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
+    </div>
+  </div>
+
+  <!-- sakset vs lizzard -->
+  <div data-role="page" id="pageseventeen">
+    <div data-role="header">
+      <h1>Battle!</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <div class="ui-grid-a">
+        <div class="ui-block-a fade-in one textcenter"><img src="img/saksi.png" alt="sakset" class="responsive-image shake"><h3 class="tekstit">You selected scissors</h3></div>
+        <div class="ui-block-b fade-in two textcenter"><img src="img/lisko.png" alt="sakset" class="responsive-image shake"><h3 class="tekstit">Opponent selected lizzard</h3></div>
+      </div><!-- /grid-a -->
+      <h1 class="textcenter fade-in three tekstit">You win!</h1>
+      <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
+    </div>
+  </div>
+
+  <!-- lisko vs kivi -->
+  <div data-role="page" id="pageeighteen">
+    <div data-role="header">
+      <h1>Battle!</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <div class="ui-grid-a">
+        <div class="ui-block-a fade-in one textcenter"><img src="img/lisko.png" alt="sakset" class="responsive-image shake"><h3 class="tekstit">You selected lizzard</h3></div>
+        <div class="ui-block-b fade-in two textcenter"><img src="img/kivi.png" alt="sakset" class="responsive-image shake"><h3 class="tekstit">Opponent selected rock</h3></div>
+      </div><!-- /grid-a -->
+      <h1 class="textcenter fade-in three tekstit">You lose!</h1>
+      <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
+    </div>
+  </div>
+
+  <!-- lisko vs paperi -->
+  <div data-role="page" id="pagenineteen">
+    <div data-role="header">
+      <h1>Battle!</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <div class="ui-grid-a">
+        <div class="ui-block-a fade-in one textcenter"><img src="img/lisko.png" alt="lisko" class="responsive-image shake"><h3 class="tekstit">You selected lizzard</h3></div>
+        <div class="ui-block-b fade-in two textcenter"><img src="img/papru.png" alt="papru" class="responsive-image shake"><h3 class="tekstit">Opponent selected paper</h3></div>
+      </div><!-- /grid-a -->
+      <h1 class="textcenter fade-in three tekstit">You win!</h1>
+      <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
+    </div>
+  </div>
+
+  <!-- lisko vs sakset -->
+  <div data-role="page" id="pagetwenty">
+    <div data-role="header">
+      <h1>Battle!</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <div class="ui-grid-a">
+        <div class="ui-block-a fade-in one textcenter"><img src="img/lisko.png" alt="lisko" class="responsive-image shake"><h3 class="tekstit">You selected lizzard</h3></div>
+        <div class="ui-block-b fade-in two textcenter"><img src="img/saksi.png" alt="saksi" class="responsive-image shake"><h3 class="tekstit">Opponent selected scissors</h3></div>
+      </div><!-- /grid-a -->
+      <h1 class="textcenter fade-in three tekstit">You lose!</h1>
+      <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
+    </div>
+  </div>
+
+  <!-- lisko vs spock -->
+  <div data-role="page" id="pagetwentyone">
+    <div data-role="header">
+      <h1>Battle!</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <div class="ui-grid-a">
+        <div class="ui-block-a fade-in one textcenter"><img src="img/lisko.png" alt="lisko" class="responsive-image shake"><h3 class="tekstit">You selected lizzard</h3></div>
+        <div class="ui-block-b fade-in two textcenter"><img src="img/spock.png" alt="spock" class="responsive-image shake"><h3 class="tekstit">Opponent selected spock</h3></div>
+      </div><!-- /grid-a -->
+      <h1 class="textcenter fade-in three tekstit">You win!</h1>
+      <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
+    </div>
+  </div>
+
+
+  <!-- lisko vs lisko -->
+  <div data-role="page" id="pagetwentytwo">
+    <div data-role="header">
+      <h1>Battle!</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <div class="ui-grid-a">
+        <div class="ui-block-a fade-in one textcenter"><img src="img/lisko.png" alt="lisko" class="responsive-image shake"><h3 class="tekstit">You selected lizzard</h3></div>
+        <div class="ui-block-b fade-in two textcenter"><img src="img/lisko.png" alt="saksi" class="responsive-image shake"><h3 class="tekstit">Opponent selected lizzard</h3></div>
+      </div><!-- /grid-a -->
+      <h1 class="textcenter fade-in three tekstit">It's a tie!</h1>
+      <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
+    </div>
+  </div>
+
+
+  <!-- spock vs kivi -->
+  <div data-role="page" id="pagetwentythree">
+    <div data-role="header">
+      <h1>Battle!</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <div class="ui-grid-a">
+        <div class="ui-block-a fade-in one textcenter"><img src="img/spock.png" alt="spock" class="responsive-image shake"><h3 class="tekstit">You selected spock</h3></div>
+        <div class="ui-block-b fade-in two textcenter"><img src="img/kivi.png" alt="kivi" class="responsive-image shake"><h3 class="tekstit">Opponent selected rock</h3></div>
+      </div><!-- /grid-a -->
+      <h1 class="textcenter fade-in three tekstit">You win!</h1>
+      <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
+    </div>
+  </div>
+
+  <!-- spock vs paperi -->
+  <div data-role="page" id="pagetwentyfour">
+    <div data-role="header">
+      <h1>Battle!</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <div class="ui-grid-a">
+        <div class="ui-block-a fade-in one textcenter"><img src="img/spock.png" alt="spock" class="responsive-image shake"><h3 class="tekstit">You selected spock</h3></div>
+        <div class="ui-block-b fade-in two textcenter"><img src="img/papru.png" alt="papru" class="responsive-image shake"><h3 class="tekstit">Opponent selected paper</h3></div>
+      </div><!-- /grid-a -->
+      <h1 class="textcenter fade-in three tekstit">You lose!</h1>
+      <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
+    </div>
+  </div>
+
+  <!-- spock vs sakset -->
+  <div data-role="page" id="pagetwentyfive">
+    <div data-role="header">
+      <h1>Battle!</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <div class="ui-grid-a">
+        <div class="ui-block-a fade-in one textcenter"><img src="img/spock.png" alt="spock" class="responsive-image shake"><h3 class="tekstit">You selected spock</h3></div>
+        <div class="ui-block-b fade-in two textcenter"><img src="img/saksi.png" alt="papru" class="responsive-image shake"><h3 class="tekstit">Opponent selected scissors</h3></div>
+      </div><!-- /grid-a -->
+      <h1 class="textcenter fade-in three tekstit">You win!</h1>
+      <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
+    </div>
+  </div>
+
+  <!-- spock vs spock -->
+  <div data-role="page" id="pagetwentysix">
+    <div data-role="header">
+      <h1>Battle!</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <div class="ui-grid-a">
+        <div class="ui-block-a fade-in one textcenter"><img src="img/spock.png" alt="spock" class="responsive-image shake"><h3 class="tekstit">You selected spock</h3></div>
+        <div class="ui-block-b fade-in two textcenter"><img src="img/spock.png" alt="spock" class="responsive-image shake"><h3 class="tekstit">Opponent selected spock</h3></div>
+      </div><!-- /grid-a -->
+      <h1 class="textcenter fade-in three tekstit">It's a tie!</h1>
+      <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
+    </div>
+  </div>
+
+
+  <!-- spock vs lisko -->
+  <div data-role="page" id="pagetwentyseven">
+    <div data-role="header">
+      <h1>Battle!</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <div class="ui-grid-a">
+        <div class="ui-block-a fade-in one textcenter"><img src="img/spock.png" alt="spock" class="responsive-image shake"><h3 class="tekstit">You selected spock</h3></div>
+        <div class="ui-block-b fade-in two textcenter"><img src="img/lisko.png" alt="lisko" class="responsive-image shake"><h3 class="tekstit">Opponent selected lizzard</h3></div>
+      </div><!-- /grid-a -->
+      <h1 class="textcenter fade-in three tekstit">You lose!</h1>
+      <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Play again!</button></a>
+    </div>
+  </div>
 
   <script>
   //Pisteet
@@ -262,65 +522,175 @@ function playAudio(id) {
   function aseValinta() {
     var pos = mySwipe.getPos();
     //randomilla tietokoneen ase
-    var computerWeapon = Math.random();
+    var computerWeapon = Math.floor(Math.random() * 5) + 1
     //tietokone <.033 kivi, 0.66 papru, saksi
     //pos 0 = kivi, pos 1 = papru, pos 2 = saksi
 
     //Logiikka kivelle
-    if (pos == "0" && computerWeapon < 0.33){
+    if (pos == "0" && computerWeapon == 1){
       //alert("Valitsit kiven, tietokone valitsi kiven");
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pagethree", { transition: "slide", changeHash: false });
     }
-    else if (pos == "0" && computerWeapon >= 0.33 && computerWeapon <= 0.66){
+    else if (pos == "0" && computerWeapon == 2){
       //alert("Valitsit kiven, tietokone valitsi paperin");
       score --;
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pagefour", { transition: "slide", changeHash: false });
     }
-    else if (pos == "0" && computerWeapon > 0.66){
+    else if (pos == "0" && computerWeapon == 3){
       //alert("valitsit kiven, tietokone valitsi sakset");
       score ++;
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pagefive", { transition: "slide", changeHash: false });
     }
+    else if (pos == "0" && computerWeapon == 4){
+      //alert("valitsit kiven, tietokone valitsi spock");
+      score --;
+      setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
+      $.mobile.changePage( "#pagetwelve", { transition: "slide", changeHash: false });
+    }
+    else if (pos == "0" && computerWeapon == 5){
+      //alert("valitsit kiven, tietokone valitsi lizzard");
+      score ++;
+      setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
+      $.mobile.changePage( "#pagethirteen", { transition: "slide", changeHash: false });
+    }
+
+
     //Logiikka paperille
-    else if (pos == "1" && computerWeapon < 0.33){
+    else if (pos == "1" && computerWeapon == 1){
       //alert("Valitsit paperin, tietokone valitsi kiven");
       score ++;
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       //document.getElementById("scoreboard").innerHTML = "Your score: " + score;
       $.mobile.changePage( "#pagesix", { transition: "slide", changeHash: false });
     }
-    else if (pos == "1" && computerWeapon >= 0.33 && computerWeapon <= 0.66){
+    else if (pos == "1" && computerWeapon == 2){
       //alert("Valitsit paperin, tietokone valitsi paperin");
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pageseven", { transition: "slide", changeHash: false });
     }
-    else if (pos == "1" && computerWeapon > 0.66){
+    else if (pos == "1" && computerWeapon == 3){
       //alert("valitsit paperin, tietokone valitsi sakset");
       score --;
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pageeight", { transition: "slide", changeHash: false });
     }
+    else if (pos == "1" && computerWeapon == 4){
+      //alert("valitsit paperin, tietokone valitsi spock");
+      score ++;
+      setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
+      $.mobile.changePage( "#pagefourteen", { transition: "slide", changeHash: false });
+    }
+    else if (pos == "1" && computerWeapon == 5){
+      //alert("valitsit paperin, tietokone valitsi lizzard");
+      score --;
+      setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
+      $.mobile.changePage( "#pagefifteen", { transition: "slide", changeHash: false });
+    }
+
+
+
     //Logiikka saksille
-    else if (pos == "2" && computerWeapon < 0.33){
+    else if (pos == "2" && computerWeapon == 1){
       //alert("Valitsit sakset, tietokone valitsi kiven");
       score --;
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pagenine", { transition: "slide", changeHash: false });
     }
-    else if (pos == "2" && computerWeapon >= 0.33 && computerWeapon <= 0.66){
+    else if (pos == "2" && computerWeapon == 2){
       //alert("Valitsit sakset, tietokone valitsi paperin");
       score ++;
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pageten", { transition: "slide", changeHash: false });
     }
-    else if (pos == "2" && computerWeapon > 0.66){
+    else if (pos == "2" && computerWeapon == 3){
       //alert("valitsit sakset, tietokone valitsi sakset");
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pageeleven", { transition: "slide", changeHash: false });
     }
+    else if (pos == "2" && computerWeapon == 4){
+      //alert("valitsit sakset, tietokone valitsi spock");
+      score --;
+      setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
+      $.mobile.changePage( "#pagesixteen", { transition: "slide", changeHash: false });
+    }
+    else if (pos == "2" && computerWeapon == 5){
+      //alert("valitsit sakset, tietokone valitsi lizzard");
+      score++;
+      setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
+      $.mobile.changePage( "#pageseventeen", { transition: "slide", changeHash: false });
+    }
+
+    //Logiikka liskolle
+
+
+    else if (pos == "3" && computerWeapon == 1){
+      //alert("Valitsit liskon, tietokone valitsi kiven");
+      score --;
+      setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
+      $.mobile.changePage( "#pageeighteen", { transition: "slide", changeHash: false });
+    }
+    else if (pos == "3" && computerWeapon == 2){
+      //alert("Valitsit liskon, tietokone valitsi paperin");
+      score ++;
+      setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
+      $.mobile.changePage( "#pagenineteen", { transition: "slide", changeHash: false });
+    }
+    else if (pos == "3" && computerWeapon == 3){
+      //alert("valitsit liskon, tietokone valitsi sakset");
+      score --;
+      setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
+      $.mobile.changePage( "#pagetwenty", { transition: "slide", changeHash: false });
+    }
+    else if (pos == "3" && computerWeapon == 4){
+      //alert("valitsit liskon, tietokone valitsi spock");
+      score ++;
+      setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
+      $.mobile.changePage( "#pagetwentyone", { transition: "slide", changeHash: false });
+    }
+    else if (pos == "3" && computerWeapon == 5){
+      //alert("valitsit liskon, tietokone valitsi lizzard");
+      setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
+      $.mobile.changePage( "#pagetwentytwo", { transition: "slide", changeHash: false });
+    }
+
+
+
+    //Logiikka spokille
+
+
+    else if (pos == "4" && computerWeapon == 1){
+      //alert("Valitsit spock, tietokone valitsi kiven");
+      score ++;
+      setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
+      $.mobile.changePage( "#pagetwentythree", { transition: "slide", changeHash: false });
+    }
+    else if (pos == "4" && computerWeapon == 2){
+      //alert("Valitsit spock, tietokone valitsi paperin");
+      score --;
+      setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
+      $.mobile.changePage( "#pagetwentyfour", { transition: "slide", changeHash: false });
+    }
+    else if (pos == "4" && computerWeapon == 3){
+      //alert("valitsit spock, tietokone valitsi sakset");
+      score ++;
+      setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
+      $.mobile.changePage( "#pagetwentyfive", { transition: "slide", changeHash: false });
+    }
+    else if (pos == "4" && computerWeapon == 4){
+      //alert("valitsit spock, tietokone valitsi spock");
+      setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
+      $.mobile.changePage( "#pagetwentysix", { transition: "slide", changeHash: false });
+    }
+    else if (pos == "4" && computerWeapon == 5){
+      //alert("valitsit spock, tietokone valitsi lizzard");
+      score --;
+      setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
+      $.mobile.changePage( "#pagetwentyseven", { transition: "slide", changeHash: false });
+    }
+
   }
 
 

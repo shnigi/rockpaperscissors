@@ -1,5 +1,5 @@
 html,body,div[data-role ="page"]{
-  background: url(../img/bg.png);
+  background: url(../img/tausta.jpg);
   background-repeat:repeat-y;
   background-position:center center;
   background-attachment:scroll;
@@ -9,6 +9,11 @@ html,body,div[data-role ="page"]{
 .dialogi{
   background-color:white;
   text-align: center;
+}
+
+.tekstit {
+  color:white;
+  text-align:center;
 }
 
 
