@@ -28,6 +28,8 @@ Your browser does not support the audio element.
 
 
 	<audio id="bgSound" src="/android_asset/www/sounds/teemabiisu.mp3" type="audio/mpeg"></audio>
+  <audio id="loseSound" src="/android_asset/www/sounds/lose.mp3" type="audio/mpeg"></audio>
+  <audio id="winSound" src="/android_asset/www/sounds/win.mp3" type="audio/mpeg"></audio>
 
 	<script>
 		//Kun softa on ladattu, soitetaan taustamusa
@@ -74,6 +76,7 @@ function playAudio(id) {
         <button onclick="aseValinta();" data-role="button" data-inline="true" data-icon="check">Fight</button>
         <button onclick="mySwipe.next()" data-role="button" data-inline="true" data-icon="arrow-r">Next</button>
         <a href="javascript:history.go(0)" data-role="button" data-inline="true" data-icon="recycle">Refresh</a>
+         <button onclick="navigator.app.exitApp()" data-role="button" data-inline="true" data-icon="">Quit</button>
       </div>
 
     </div>
@@ -544,24 +547,28 @@ function playAudio(id) {
       score --;
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pagefour", { transition: "slide", changeHash: false });
+      playAudio('loseSound');
     }
     else if (pos == "0" && computerWeapon == 3){
       //alert("valitsit kiven, tietokone valitsi sakset");
       score ++;
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pagefive", { transition: "slide", changeHash: false });
+      playAudio('winSound');
     }
     else if (pos == "0" && computerWeapon == 4){
       //alert("valitsit kiven, tietokone valitsi spock");
       score --;
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pagetwelve", { transition: "slide", changeHash: false });
+      playAudio('loseSound');
     }
     else if (pos == "0" && computerWeapon == 5){
       //alert("valitsit kiven, tietokone valitsi lizzard");
       score ++;
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pagethirteen", { transition: "slide", changeHash: false });
+      playAudio('winSound');
     }
 
 
