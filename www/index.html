@@ -547,28 +547,28 @@ function playAudio(id) {
       score --;
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pagefour", { transition: "slide", changeHash: false });
-      playAudio('loseSound');
+      setTimeout(function(){  playAudio('loseSound'); }, 3000);
     }
     else if (pos == "0" && computerWeapon == 3){
       //alert("valitsit kiven, tietokone valitsi sakset");
       score ++;
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pagefive", { transition: "slide", changeHash: false });
-      playAudio('winSound');
+      setTimeout(function(){  playAudio('winSound');}, 3000);
     }
     else if (pos == "0" && computerWeapon == 4){
       //alert("valitsit kiven, tietokone valitsi spock");
       score --;
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pagetwelve", { transition: "slide", changeHash: false });
-      playAudio('loseSound');
+      setTimeout(function(){  playAudio('loseSound'); }, 3000);
     }
     else if (pos == "0" && computerWeapon == 5){
       //alert("valitsit kiven, tietokone valitsi lizzard");
       score ++;
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pagethirteen", { transition: "slide", changeHash: false });
-      playAudio('winSound');
+       setTimeout(function(){  playAudio('winSound');}, 3000);
     }
 
 
@@ -579,6 +579,7 @@ function playAudio(id) {
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       //document.getElementById("scoreboard").innerHTML = "Your score: " + score;
       $.mobile.changePage( "#pagesix", { transition: "slide", changeHash: false });
+      setTimeout(function(){  playAudio('winSound');}, 3000);
     }
     else if (pos == "1" && computerWeapon == 2){
       //alert("Valitsit paperin, tietokone valitsi paperin");
@@ -590,18 +591,21 @@ function playAudio(id) {
       score --;
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pageeight", { transition: "slide", changeHash: false });
+         setTimeout(function(){  playAudio('loseSound'); }, 3000);
     }
     else if (pos == "1" && computerWeapon == 4){
       //alert("valitsit paperin, tietokone valitsi spock");
       score ++;
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pagefourteen", { transition: "slide", changeHash: false });
+        setTimeout(function(){  playAudio('winSound');}, 3000);
     }
     else if (pos == "1" && computerWeapon == 5){
       //alert("valitsit paperin, tietokone valitsi lizzard");
       score --;
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pagefifteen", { transition: "slide", changeHash: false });
+         setTimeout(function(){  playAudio('loseSound'); }, 3000);
     }
 
 
@@ -612,12 +616,14 @@ function playAudio(id) {
       score --;
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pagenine", { transition: "slide", changeHash: false });
+         setTimeout(function(){  playAudio('loseSound'); }, 3000);
     }
     else if (pos == "2" && computerWeapon == 2){
       //alert("Valitsit sakset, tietokone valitsi paperin");
       score ++;
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pageten", { transition: "slide", changeHash: false });
+      setTimeout(function(){  playAudio('winSound');}, 3000);
     }
     else if (pos == "2" && computerWeapon == 3){
       //alert("valitsit sakset, tietokone valitsi sakset");
@@ -629,12 +635,14 @@ function playAudio(id) {
       score --;
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pagesixteen", { transition: "slide", changeHash: false });
+         setTimeout(function(){  playAudio('loseSound'); }, 3000);
     }
     else if (pos == "2" && computerWeapon == 5){
       //alert("valitsit sakset, tietokone valitsi lizzard");
       score++;
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pageseventeen", { transition: "slide", changeHash: false });
+      setTimeout(function(){  playAudio('winSound');}, 3000);
     }
 
     //Logiikka liskolle
@@ -645,24 +653,28 @@ function playAudio(id) {
       score --;
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pageeighteen", { transition: "slide", changeHash: false });
+        setTimeout(function(){  playAudio('loseSound'); }, 3000);
     }
     else if (pos == "3" && computerWeapon == 2){
       //alert("Valitsit liskon, tietokone valitsi paperin");
       score ++;
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pagenineteen", { transition: "slide", changeHash: false });
+      setTimeout(function(){  playAudio('winSound');}, 3000);
     }
     else if (pos == "3" && computerWeapon == 3){
       //alert("valitsit liskon, tietokone valitsi sakset");
       score --;
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pagetwenty", { transition: "slide", changeHash: false });
+        setTimeout(function(){  playAudio('loseSound'); }, 3000);
     }
     else if (pos == "3" && computerWeapon == 4){
       //alert("valitsit liskon, tietokone valitsi spock");
       score ++;
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pagetwentyone", { transition: "slide", changeHash: false });
+      setTimeout(function(){  playAudio('winSound');}, 3000);
     }
     else if (pos == "3" && computerWeapon == 5){
       //alert("valitsit liskon, tietokone valitsi lizzard");
@@ -680,18 +692,21 @@ function playAudio(id) {
       score ++;
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pagetwentythree", { transition: "slide", changeHash: false });
+      setTimeout(function(){  playAudio('winSound');}, 3000);
     }
     else if (pos == "4" && computerWeapon == 2){
       //alert("Valitsit spock, tietokone valitsi paperin");
       score --;
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pagetwentyfour", { transition: "slide", changeHash: false });
+        setTimeout(function(){  playAudio('loseSound'); }, 3000);
     }
     else if (pos == "4" && computerWeapon == 3){
       //alert("valitsit spock, tietokone valitsi sakset");
       score ++;
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pagetwentyfive", { transition: "slide", changeHash: false });
+      setTimeout(function(){  playAudio('winSound');}, 3000);
     }
     else if (pos == "4" && computerWeapon == 4){
       //alert("valitsit spock, tietokone valitsi spock");
@@ -703,6 +718,7 @@ function playAudio(id) {
       score --;
       setTimeout(function(){  document.getElementById("scoreboard").innerHTML = "Your score: " + score;}, 2000);
       $.mobile.changePage( "#pagetwentyseven", { transition: "slide", changeHash: false });
+        setTimeout(function(){  playAudio('loseSound'); }, 3000);
     }
 
   }
