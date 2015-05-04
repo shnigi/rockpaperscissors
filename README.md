@@ -1,7 +1,2 @@
-TODO:
-
-Taustamusa
-mahd. peliäänet?
-Pelin aloittaminen vasta kun dialogia on klikattu
-Paremmat grafiikat
-lizzard ja spock?
+Ota mediaplugin käyttöön komennolla:
+cordova plugin add org.apache.cordova.media
