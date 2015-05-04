@@ -76,7 +76,8 @@ function playAudio(id) {
         <button onclick="aseValinta();" data-role="button" data-inline="true" data-icon="check">Fight</button>
         <button onclick="mySwipe.next()" data-role="button" data-inline="true" data-icon="arrow-r">Next</button>
         <a href="javascript:history.go(0)" data-role="button" data-inline="true" data-icon="recycle">Refresh</a>
-         <button onclick="navigator.app.exitApp()" data-role="button" data-inline="true" data-icon="">Quit</button>
+                <button onclick="info()" data-role="button" data-inline="true" data-icon="info">Info</button>
+         <button onclick="navigator.app.exitApp()" data-role="button" data-inline="true" data-icon="delete">Quit</button>
       </div>
 
     </div>
@@ -92,6 +93,10 @@ function playAudio(id) {
 
   <!--Ladataan dialogi kun sivu avataan-->
   <script>
+	var info = function(){
+		$.mobile.changePage( "#pagetwo", { transition: "slideup", changeHash: false });
+	}  
+	  
   $(document).ready(function() {
     //Ladataan popup boxi
     $.mobile.changePage( "#pagetwo", { transition: "slideup", changeHash: false });
@@ -105,13 +110,16 @@ function playAudio(id) {
   <!--Dialogiboxi-->
   <div data-role="page" data-dialog="true" id="pagetwo">
     <div data-role="main" class="ui-content dialogi dialog-center">
-      <h1>Rock-paper-scissors-lizzard-spock mobile! </h1>
+      <h1>Rock-Paper-Scissors-Lizzard-Spock! </h1>
+      <h2>Scroll down!</h2>
       <p>Swipe left or right to select your weapon</p>
       <img src="img/swipe.png" alt="swipe">
       <p> shake your phone to fight! </p>
       <img src="img/shake.png" alt="shake">
       <p>If the game doesn't load for some reason, please press refresh and try again!</p>
       <img src="img/refresh.png" alt="refresh">
+        <p>Who beats who?</p>
+      <img src="img/logiikka.png" alt="logiikka" class="responsive-image">
       <a href="#pageone" id="okbutton"><button>Ok!</button></a>
     </div>
   </div>
