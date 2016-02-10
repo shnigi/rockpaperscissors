@@ -34,7 +34,17 @@ Your browser does not support the audio element.
 	<script>
 		//Kun softa on ladattu, soitetaan taustamusa
 		document.addEventListener("deviceready", function(){
-      playAudio('bgSound');
+     // playAudio('bgSound');
+      
+      var myMedia;
+var loop = function (status) {
+    if (status === Media.MEDIA_STOPPED) {
+        myMedia.play();
+    }
+};
+myMedia = new Media("/android_asset/www/sounds/teemabiisu.mp3", null, null, loop);
+myMedia.play();
+
  },true);
 
 		//ladataan musa ID:n perusteella

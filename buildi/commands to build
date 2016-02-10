@@ -1,3 +1,0 @@
-jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore avain CordovaApp-release-unsigned.apk shnigi
-
-./zipalign -v 4 CordovaApp-release-unsigned.apk rockpaperscissorslizardspock.apk
